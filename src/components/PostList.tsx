@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import PostCard from "./PostCard"
+import "./DanhSachBaiViet.css"
+
 
 interface Bai {
   id: number
@@ -17,7 +19,7 @@ export default function DanhSachBaiViet() {
       tieuDe: "Lập trình React cơ bản",
       tacGia: "Phan Đạt",
       moTa: "Giới thiệu về React và cách tạo component cơ bản...",
-      anh: "https://picsum.photos/300/200?1",
+      anh: "",
     },
     {
       id: 2,

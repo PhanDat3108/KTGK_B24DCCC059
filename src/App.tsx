@@ -1,33 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
-import PostList from "./components/PostList"
-import PostForm from "./components/PostForm"
-import PostDetail from "./components/PostDetail"
+import TrangChu from "./pages/TrangChu"
 import TaoBaiViet from "./pages/TaoBaiViet"
-import ChiTietBai from "./pages/PostDetail"
-// ...
+import PostDetail from "./pages/PostDetail"
+import PostEdit from "./pages/PostEdit"
 
-
-
+interface Bai {
+  id: number
+  tieuDe: string
+  noiDung: string
+}
 
 export default function App() {
+  const [ds, setDs] = useState<Bai[]>([
+    { id: 1, tieuDe: "Bài viết 1", noiDung: "Nội dung bài viết 1" },
+    { id: 2, tieuDe: "Bài viết 2", noiDung: "Nội dung bài viết 2" },
+  ])
+
+  const capNhat = (baiMoi: Bai) => {
+    setDs(ds.map(b => (b.id === baiMoi.id ? baiMoi : b)))
+  }
+
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/bai/:id" element={<ChiTietBai />} />
-        <Route path="/create" element={<TaoBaiViet />} />
-        <Route path="/" element={<PostList />} />
-        <Route path="/viet-bai" element={<PostForm />} />
+        <Route path="/" element={<TrangChu />} />
+        <Route path="/tao-bai" element={<TaoBaiViet />} />
         <Route path="/bai/:id" element={<PostDetail />} />
+        <Route path="/bai/sua/:id" element={<PostEdit ds={ds} capNhat={capNhat} />} />
       </Routes>
     </Router>
   )
 }
-
-
-

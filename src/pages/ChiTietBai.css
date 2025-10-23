@@ -1,0 +1,80 @@
+.chiTietBai {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chiTietBai h2 {
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.chiTietBai p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.chiTietBai img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nutBaiViet {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.nutBaiViet button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nutBaiViet button:nth-child(1) {
+  background-color: #ccc;
+  color: #333;
+}
+
+.nutBaiViet button:nth-child(1):hover {
+  background-color: #999;
+}
+
+.nutBaiViet button:nth-child(2) {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.nutBaiViet button:nth-child(2):hover {
+  background-color: #0056b3;
+}
+
+.nutBaiViet button:nth-child(3) {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.nutBaiViet button:nth-child(3):hover {
+  background-color: #a71d2a;
+}
+
+@media (max-width: 600px) {
+  .nutBaiViet {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

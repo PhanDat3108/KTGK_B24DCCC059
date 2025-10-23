@@ -1,13 +1,18 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
+import "./Navbar.css"
 
 export default function Navbar() {
   return (
-    <div className="thanhDieuhuong">
+    <nav className="thanhDieuhuong">
       <div className="logo">BLOG CỦA ĐẠT</div>
       <div className="link">
-        <Link to="/">Trang chủ</Link>
-        <Link to="/viet-bai">Viết bài</Link>
+        <NavLink to="/" className="muc" end>
+          Trang chủ
+        </NavLink>
+        <NavLink to="/tao-bai" className="muc">
+          Viết bài
+        </NavLink>
       </div>
-    </div>
+    </nav>
   )
 }

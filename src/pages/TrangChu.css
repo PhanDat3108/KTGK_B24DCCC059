@@ -1,0 +1,55 @@
+.trang-chu {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.trang-chu h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.thanh-timkiem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.thanh-timkiem input {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.2s;
+}
+
+.thanh-timkiem input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.thanh-timkiem button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.thanh-timkiem button:hover {
+  background-color: #0056b3;
+}
+
+.khung-bai-viet {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}

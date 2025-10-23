@@ -1,5 +1,7 @@
 import React from "react"
 import { useParams, useNavigate } from "react-router-dom"
+import "./ChiTietBai.css"
+
 
 interface Bai {
   id: number
@@ -39,6 +41,40 @@ export default function ChiTietBai() {
         "TypeScript mở rộng JavaScript bằng hệ thống kiểu dữ liệu tĩnh. Điều này giúp hạn chế lỗi, cải thiện khả năng bảo trì và tối ưu hiệu suất khi làm việc nhóm.",
       theLoai: "Công nghệ",
     },
+    {
+  id: 3,
+  tieuDe: "React Router toàn tập",
+  tacGia: "Trần Nam",
+  ngayDang: "22/10/2025",
+  moTa: "Tìm hiểu React Router từ cơ bản đến nâng cao...",
+  anh: "https://picsum.photos/600/400?3",
+  noiDung:
+    "React Router là thư viện mạnh mẽ giúp bạn điều hướng giữa các trang trong ứng dụng React. Bạn có thể tạo các route, nested route, và sử dụng hook như useNavigate, useParams để quản lý điều hướng.",
+  theLoai: "Công nghệ",
+},
+{
+  id: 4,
+  tieuDe: "Cách tối ưu hiệu năng React",
+  tacGia: "Phan Đạt",
+  ngayDang: "23/10/2025",
+  moTa: "Hướng dẫn các phương pháp tối ưu React...",
+  anh: "https://picsum.photos/600/400?4",
+  noiDung:
+    "Học cách tối ưu ứng dụng React của bạn bằng memoization, lazy loading, code splitting và tối ưu render để giúp ứng dụng chạy mượt mà hơn.",
+  theLoai: "Công nghệ",
+},
+{
+  id: 5,
+  tieuDe: "Quản lý state bằng Redux",
+  tacGia: "Minh Quân",
+  ngayDang: "23/10/2025",
+  moTa: "Redux giúp quản lý state tập trung hiệu quả...",
+  anh: "https://picsum.photos/600/400?5",
+  noiDung:
+    "Redux là công cụ quản lý state phổ biến trong các dự án React lớn, giúp tách logic state khỏi component, dễ dàng debug và mở rộng ứng dụng.",
+  theLoai: "Công nghệ",
+},
+
   ]
 
   const bai = dsBai.find((b) => b.id === Number(id))
